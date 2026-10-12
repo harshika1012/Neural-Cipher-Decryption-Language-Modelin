@@ -1,0 +1,25 @@
+# Task 3 - Decryption Correction config
+device: cuda
+seed: 42
+
+repos:
+  p1: Krishiv03/seq2seq-cipher-model
+  p2: Krishiv03/predict-NWP-MLM-cipher-model
+
+files:
+  char_vocab: char_vocab_b64_lr0.001_epoch20.pkl
+  word_vocab: models/dominion_vocab_epochs10.pkl
+  lstm_model: lstm_b64_lr0.001_epoch20_best2.pt
+  bilstm_model: models/bilstm_dominion_mlm_epochs10.pth
+  ssm_model: models/ssm_dominion_nwp_epochs10.pth
+
+data:
+  plain_file: data/plain.txt
+  noisy_cipher_prefix: data/cipher_0
+  noise_levels: [0, 1, 2, 3, 4]
+  num_samples: 100
+
+output:
+  metrics_csv: dominion_final_metrics_ssm.csv
+  error_csv: dominion_error_analysis_ssm.csv
+  charts: part3_performance_charts_ssm.png

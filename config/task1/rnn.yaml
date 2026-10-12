@@ -1,0 +1,31 @@
+# Task 1 - RNN decryption config
+# Fill in hyperparameters and paths as needed.
+seed: 42
+
+data:
+  plain_file: data/plain.txt
+  cipher_file: data/cipher_00.txt
+  train_split: 0.8
+  val_split: 0.1
+
+model:
+  input_dim: 200
+  emb_dim: 128
+  hid_dim: 256
+  mode: RNN
+  max_len: 128
+
+training:
+  epochs: 20
+  batch_size: 64
+  lr: 0.001
+  teacher_forcing_ratio: 0.5
+  grad_clip: 1.0
+
+logging:
+  use_wandb: true
+  project: cipher-seq2seq
+
+output:
+  dir: outputs/task1_rnn
+  repo_id: Krishiv03/seq2seq-cipher-model
