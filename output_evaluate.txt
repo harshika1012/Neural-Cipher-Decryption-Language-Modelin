@@ -1,0 +1,35 @@
+--- STARTING RUN (evaluate) ---
+Using device: cpu
+Downloading assets from Hugging Face...
+Initializing Models...
+
+Evaluating Noise Level: data/cipher_00.txt
+
+Evaluating Noise Level: data/cipher_01.txt
+
+Evaluating Noise Level: data/cipher_02.txt
+
+Evaluating Noise Level: data/cipher_03.txt
+
+Evaluating Noise Level: data/cipher_04.txt
+
+==================================================
+FINAL DOMINION PERFORMANCE PIPELINE RESULTS
+==================================================
+ Noise_Level            Approach  Char_Acc  Word_Acc  Levenshtein      BLEU  ROUGE-L
+           0    Decryption Alone  0.519644  0.380830        56.50 16.557004 0.405690
+           0    Decryption + SSM  0.475643  0.426830        58.70 22.706913 0.464808
+           0 Decryption + BiLSTM  0.458921  0.404936        60.37 21.076245 0.439746
+           1    Decryption Alone  0.457153  0.238823        62.63  4.947776 0.263468
+           1    Decryption + SSM  0.426017  0.348721        63.12 15.663860 0.390342
+           1 Decryption + BiLSTM  0.403612  0.310493        65.35 13.306016 0.348199
+           2    Decryption Alone  0.415263  0.201565        66.11  1.958641 0.222965
+           2    Decryption + SSM  0.393922  0.315391        66.10 11.824476 0.352114
+           2 Decryption + BiLSTM  0.378735  0.294381        68.00 10.269833 0.331039
+           3    Decryption Alone  0.375114  0.174154        69.62  1.390170 0.189626
+           3    Decryption + SSM  0.361667  0.273945        69.40  8.137562 0.309683
+           3 Decryption + BiLSTM  0.347531  0.258635        69.86  7.037767 0.293399
+           4    Decryption Alone  0.356054  0.146823        72.47  0.599443 0.166255
+           4    Decryption + SSM  0.333435  0.235249        72.09  7.522895 0.265794
+           4 Decryption + BiLSTM  0.325969  0.222208        72.97  5.955771 0.255843
+Charts saved to part3_performance_charts_bilstm.png
